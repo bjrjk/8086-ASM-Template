@@ -18,10 +18,15 @@ Parameter Passing Convention: `_stdcall`
 
 寄存器中，BP做帧指针，SP做栈指针。
 保护现场后栈中BP及其上有可能的参数存储位置：
+
 `[BP]` -> previous BP ，上一函数的帧指针
+
 `[BP+2]` -> return address，上一函数的返回地址
+
 `[BP+4]` -> first parameter，第一个参数（若有）
+
 `[BP+6]` -> second parameter，第二个参数（若有）
+
 ...，第X个，以此类推
 
 程序中典型的读取函数调用参数的语句：
